@@ -1,15 +1,9 @@
-export function taskFirst() {
-  const task = 'I prefer const when I can.';
-  return task;
-}
+export default function getNeighborhoodsList() {
+  this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
-export function getLast() {
-  return ' is okay';
-}
-
-export function taskNext() {
-  let combination = 'But sometimes let';
-  combination += getLast();
-
-  return combination;
+  const self = this;
+  this.addNeighborhood = (newNeighborhood) => {
+    self.sanFranciscoNeighborhoods.push(newNeighborhood);
+    return self.sanFranciscoNeighborhoods;
+  };
 }
